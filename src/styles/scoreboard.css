@@ -1,0 +1,10 @@
+.scoreboard{
+    margin: 10px;
+    height: auto;
+    width: 210px;
+    padding: 10px;
+    text-align: start;
+    font-size: 30px;
+    color: white;
+    background-color: rgb(142, 142, 142);
+}

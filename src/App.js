@@ -1,5 +1,7 @@
 import React , {useState} from "react";
 import CardGrids from "./component/cardgrids";
+import ScoreBoard from "./component/scoreboard";
+import "../src/styles/App.css"
 
 const App = () =>{
     const [CurrentScore, setCurrentScore] = useState(0);
@@ -21,15 +23,19 @@ const App = () =>{
             setclickedBooks((prevState)=> [...prevState, bookname]);
         }
     }
-    
+
     const resetGame = () =>{
         setclickedBooks([]);
         setCurrentScore(0);
     }
 
     return (
-        <>
-            <CardGrids handleClick = {handleClick} />
+        <> 
+            <p className="header">Book-Memory</p>
+            <div className="content">
+                <CardGrids handleClick = {handleClick} />
+                <ScoreBoard CurrentScore = {CurrentScore} BestScore = {BestScore} />
+            </div>
         </>
     )
 }
